@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="sty.css">
+    <title>Document</title>
+</head>
+<body>
+    name <input type="namebox" type="text"></input><br><br>
+    location <input type=" textbox" type="text"></input>
+
+    <button id="insert">insert</button>
+    
+<script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-database.js"></script> 
+<script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-storage.js"></script> 
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
+
+<script id="mainscript">
+
+ var firebaseConfig = {
+    apiKey: "AIzaSyASdiKbnrje8b4cs8nKIh_0kOIpc8Jh7cg",
+    authDomain: "data1-4a203.firebaseapp.com",
+    projectId: "data1-4a203",
+    storageBucket: "data1-4a203.appspot.com",
+    messagingSenderId: "613136806384",
+    appId: "1:613136806384:web:a27aad95dd00f35f9b2d35",
+    measurementId: "G-92DHQD2YPM"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+var nameV, textV;
+function ready(){
+    nameV = document.getElementById('namebox').value;
+    textV = document.getElementById('textbox').value;
+}
+document.getElementById('insert').onclick = function(){
+    ready();
+    firebase.database().ref('user/'+nameV).set({
+        nameofuser: nameV,
+        locationOfUser: textV
+    });
+}
+</script>
+</script>
+</script>
+</body>
+</html>

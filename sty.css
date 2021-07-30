@@ -1,0 +1,427 @@
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+*{
+    margin:0; padding:0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-transform: capitalize;
+    outline: none; border:none;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    overflow-y: scroll;
+    overflow-x: hidden;
+    max-width: 100vw;
+    /* min-height: 100vh; */
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    background:linear-gradient(deeppink, purple);
+    padding:5.5rem;
+}
+
+/* section{
+    padding: 7%;
+} */
+
+	h1{
+		width: 3%;
+	    position: relative;
+	    top: -1px;
+	    left: -10%;
+	    cursor: pointer;
+	}
+	h1:before{
+		content: attr(data-count);
+	    position: absolute;
+	    right: 16px;
+	    font-size: 15px;
+	    text-align: center;
+	    top: -12px;
+	    width: 20px;
+	    height: 20px;
+	    background: red;
+	    border-radius: 50%;
+	    opacity: 0;
+	}
+	h1.zero:before{
+		opacity: 1;
+	}
+		section{
+			margin: 100px auto;
+			display: flex;
+			justify-content: space-around;
+		}
+		section div{
+			
+			padding: 1%;
+		}
+		img{
+			width: 300px;
+			height: 186px;
+		}
+
+		p{
+			margin: 5px 3rem;
+		}
+		h6{
+		    width: 50px;
+		    padding: 5px;
+		    margin: 10px;
+		    font-size: 15px;
+		}
+		button{
+			padding: 5px;
+		    background: red;
+		    border: none;
+		    outline: none;
+		    font-weight: bold;
+		    color: #fafafa;
+		    cursor: pointer;
+            margin: 5px 3rem;
+		}
+		section div span{
+			position: absolute;
+		    top: 14px;
+		    left: 13px;
+		    background: red;
+		    width: 300px;
+		    height: 186px;
+		    display: none;
+		}
+		section div span img{
+			width: 100%;
+			height: 100%;
+		}
+		section div:nth-child(1)>span.active{
+			animation: first 0.5s ease-in;
+			z-index: 2;
+			display: block;
+
+		}
+		section div:nth-child(2)>span.active{
+			animation: second 0.5s ease-in;
+			z-index: 2;
+			display: block;
+
+		}
+		section div:nth-child(3)>span.active{
+			animation: third 0.5s ease-in;
+			z-index: 2;
+			display: block;
+
+		}
+		section div:nth-child(4)>span.active{
+			animation: four 0.5s ease-in;
+			z-index: 2;
+			display: block;
+
+		}
+		@keyframes first{
+			to{
+				width: 30px;
+			    height: 20px;
+			    left: 1290px;
+			    top: -70px;
+			}
+		}
+		@keyframes second{
+			to{
+				width: 30px;
+			    height: 20px;
+			    left: 948px;
+			    top: -70px;
+			}
+		}
+		@keyframes third{
+			to{
+				width: 30px;
+			    height: 20px;
+			    left: 606px;
+			    top: -70px;
+			}
+		}
+		@keyframes four{
+			to{
+				width: 30px;
+			    height: 20px;
+			    left: 265px;
+			    top: -70px;
+			}
+		}
+        .container{
+            /* height: 700rem; */
+            width:120rem;
+            height: auto;
+            background:rgba(255,255,255,.2);
+            box-shadow: 0 1rem 2rem rgba(0,0,0,.3);
+            backdrop-filter: blur(5rem);
+            border-radius: 1rem;
+        }
+        
+            /* .item{
+                border: 1px;
+                width: max-content;
+                text-align: center;
+                display: inline-block;
+                margin: 5px;
+            } */
+                
+.item{
+    border: 1px solid white;
+    margin-top: 50px;
+}        
+.item img{
+    width: 30px;
+
+    /* padding: 5px; */
+}
+.item p{
+    font-size: 20px;
+    color: whitesmoke;
+}
+
+.store{
+
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding-top: 65px;
+    place-items: center;
+}
+.item{
+    padding: 5rem 4rem;
+}
+.store img{
+    height: 250px;
+    width: 25rem;
+    margin: 20px;
+    padding: 8px;
+}
+.store h1,h2{
+    -moz-box-align: center;
+}
+
+.theme-toggler{
+    background:rgba(255,255,255,.2);
+    box-shadow: 0 1rem 2rem rgba(0,0,0,.2);
+    border-radius: 1rem;
+    backdrop-filter: blur(.4rem);
+}
+
+.theme-toggler span{
+    display: block;
+    height:3rem;
+    width:3rem;
+    border-radius: 50%;
+    cursor: pointer;
+    margin:2rem 2.5rem;
+    box-shadow: 0 0 0 .5rem rgba(255,255,255,.2),
+                0 1rem 2rem rgba(0,0,0,.4);
+}
+.item h6{
+    color:aqua ;
+    margin: 5px 3rem;
+}    
+        
+
+		
+		.select{
+			width: 60%;
+			height: 580px;
+			padding: 5%;
+			background: #222;
+			position: absolute;
+			top: -1000px;
+			left: 20%;
+			transition: 0.5s;
+			overflow-y: auto;
+			margin: auto;
+		}
+		.select.display{
+			top: 10px;
+		}
+		.select div{
+			width: 100%;
+			height: 200px;
+			display: flex;
+			padding: 5px;
+			position: relative;
+			margin: 5px auto;
+		}
+		.select div img{
+			width: 300px;
+			height: 100%;
+		}
+		.select div p{
+			padding: 35px;
+			
+		}
+		.select div h6,
+		.select div button{
+			position: absolute;
+			left: 45%;
+			top: 50%;
+		
+		}
+		.select div button{
+			left: 60%;
+			top: 55%;
+		}
+		.select div span{
+			display: none;
+		}
+        #check{
+            display: none;
+        }
+        .logo-header{
+            margin-left: 5rem;
+            width: 180px;
+            position: relative;
+            left: 3rem;
+            background-color: lightpink;
+            position: absolute;
+        }
+        .logo-header::before{
+            content: "";
+            position: absolute;
+            bottom: 0;
+            height:98px;
+            z-index: -1;
+            right: -80px;
+            width: 80%;
+            transform: skew(30deg);
+            background-color: lightpink;
+        
+        }
+        .logo-header::after{
+            content: "";
+            position: absolute;
+            bottom: 0;
+            height: 100%;
+            z-index: -1;
+            right: -10%;
+            width: 278px;
+            background-color: lightpink;
+        }
+        .logo-header a{
+            color: maroon;
+            font-size: 33px;
+            font-weight: 600;
+            line-height: 70px;
+            text-decoration: none;
+        }
+        ul{
+            float: right;
+        }
+        
+        nav ul li{
+            display: inline-block;
+            line-height: 70px;
+            border-radius: 14px;
+        }
+        nav li.active a{
+            color: maroon;
+            background-color: lightpink;
+            border-radius: 14px;
+        }
+        nav li a{
+            padding: 15px 25px;
+            border: 0;
+            margin-bottom: 8px;
+            font-size: 16px;
+            font-weight: 500;
+            color: maroon;
+            opacity: 1;
+            text-decoration: none;
+            transition: all 0.5s;
+            border-radius: 14px;
+        }
+        nav li:hover a{
+            color: maroon;
+            background-color: lightpink;
+            border-radius: 14px4;
+        }
+        @media(max-width: 1250px){
+            .main-bar{
+                padding: 0.2%;
+            }
+            nav li a{
+                padding: 15px 20px;
+            }
+        }
+        .checkbtn{
+            float: right;
+            width: 20px;
+            height: 18px;
+            position: relative;
+            transform: rotate(0);
+            transition: 0.5s ease-in-out;
+            cursor: pointer;
+            top: 25px;
+            display: none;
+        }
+        .checkbtn span{
+            background-color: maroon;
+            display: block;
+            position: absolute;
+            height: 2px;
+            width: 100%;
+            border-radius: 1px;
+            opacity: 1;
+            left: 0;
+            transform: rotate(0);
+            transition:0.25s ease-in-out; 
+        }
+        .checkbtn span:nth-child(1){
+            top: 0;
+        }
+        .checkbtn span:nth-child(2){
+            top: 7px;
+        }
+        .checkbtn span:nth-child(3){
+            top: 14px;
+        }
+        @media(max-width: 992px){
+            .main-bar{
+                padding: 0 10%;
+            }
+            .checkbtn{
+                display: block;
+                margin-right: 40px;
+            }
+            nav ul{
+                position: fixed;
+                width: 350px;
+                height: 100vh;
+                background: #555;
+                top: 68px;
+                left: -100%;
+                text-align: center;
+                transition: all 0.5s;
+            }
+            nav ul li{
+                display: block;
+                margin: 50px 0;
+                line-height: 30px;
+            }
+            #check:checked ~ ul{
+                left: 0;
+            }
+        }
+        @media(max-width: 560px){
+            nav ul{
+                display: block;
+                width: 100%;
+            }
+            .store{
+                grid-template-columns: auto !important;            }
+        }
+        /* .item img{
+            width: 300px;
+            padding: 5px;
+        } */
